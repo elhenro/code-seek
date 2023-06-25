@@ -46,6 +46,8 @@ This command saves the vector store locally for faster subsequent queries:
 python seek.py -q "Summarise what my web application does in 3 sentences." --persist
 ```
 
+Defaults to `False` if not specified.
+
 ## Specify Model
 
 ```bash
