@@ -73,7 +73,7 @@ Defaults to `5` if not specified.
 ## Check size of vector store
 
 ```bash
-du -sh store
+du -sh persist
 ```
 
 ## Additional Tools
