@@ -8,6 +8,16 @@ The `seek.py` script will scrape web and local content, store it in a vector db,
 
 Initially, it reads a list of URLs from a file, scrapes the web content from these URLs, and stores text. Then, it creates an index from the stored data and other files in the project directory, and uses this index to power a question-answering system, to answer questions based on the indexed data.
 
+## Features
+
+- Web Scraping
+- Data Storage
+- Sqlite Database (for history, with custom loader)
+- Recursive Document Finding and Loading
+- Index Creation
+- **Retrieval-Based Question Answering**
+- Interactive Chat Interface
+- Command Line Arguments
 ## Requirements
 
 - Python version 3.10.12 or higher
