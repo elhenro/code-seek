@@ -72,6 +72,17 @@ Note that high values can lead to long runtimes and there are context length lim
 
 Defaults to `5` if not specified.
 
+## History
+
+To deactivate history, use the `--no-history` flag:
+
+```bash
+python seek.py -q ".." --no-history
+```
+
+History is enabled by default.
+
+It is stored in a local sqlite database.
 ## Check size of vector store
 
 ```bash
