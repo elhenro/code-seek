@@ -1,8 +1,12 @@
 # code-seek
 
-> Give GPT detailed knowledge about your project and add information from the web.
+> Give GPT knowledge about your project and add any info from the web.
 
-Simple python script to scrape web and local content, store it, then use it to answer queries. Initially, it reads a list of URLs from a file, scrapes the web content from these URLs, and stores text. Then, it creates an index from the stored data and other files in the project directory, and uses this index to power a question-answering system based on OpenAI's language models, to answer questions based on the indexed data.
+It is acomplished with the [retrieval plugin](https://github.com/openai/chatgpt-retrieval-plugin), which allows models to perform semantic searches against a vector database ([chroma](https://github.com/chroma-core/chroma)).
+
+The `seek.py` script will scrape web and local content, store it in a vector db, then use it with openai models to answer queries.
+
+Initially, it reads a list of URLs from a file, scrapes the web content from these URLs, and stores text. Then, it creates an index from the stored data and other files in the project directory, and uses this index to power a question-answering system, to answer questions based on the indexed data.
 
 ## Requirements
 
@@ -42,7 +46,7 @@ This command saves the vector store locally for faster subsequent queries:
 python seek.py -q "Summarise what my web application does in 3 sentences." --persist
 ```
 
-## Size of vector store
+## Check size of vector store
 
 ```bash
 du -sh store

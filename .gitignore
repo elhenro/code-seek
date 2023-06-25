@@ -3,3 +3,4 @@ persist
 .chroma
 .mypy_cache/
 .venv
+project
