@@ -71,10 +71,12 @@ def create_index_from_loaders(PERSIST):
 
 def create_chain(index):
     modelName =  sys.argv[sys.argv.index('-m') + 1] if '-m' in sys.argv else "gpt-3.5-turbo"
+    numberOfResults = int(sys.argv[sys.argv.index('-k') + 1]) if '-k' in sys.argv else 5
     print("Creating chain with model:", modelName, "\n")
+    print("Number of results:", numberOfResults, "\n")
     return RetrievalQA.from_chain_type(
         llm=ChatOpenAI(model=modelName),
-        retriever=index.vectorstore.as_retriever(search_kwargs={"k": 10}),
+        retriever=index.vectorstore.as_retriever(search_kwargs={"k": numberOfResults}),
     )
 
 if __name__ == "__main__":

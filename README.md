@@ -46,6 +46,30 @@ This command saves the vector store locally for faster subsequent queries:
 python seek.py -q "Summarise what my web application does in 3 sentences." --persist
 ```
 
+## Specify Model
+
+```bash
+python seek.py -q ".." -m gpt-4
+```
+
+or
+
+```bash
+python seek.py -q ".." -m gpt-3.5-turbo
+```
+
+Defaults to `gpt-3.5-turbo` if not specified.
+
+## Specify Number of Results to Return from Chroma
+
+```bash
+python seek.py -q ".." -k 10
+```
+
+Note that high values can lead to long runtimes and there are context length limits for GPT.
+
+Defaults to `5` if not specified.
+
 ## Check size of vector store
 
 ```bash
@@ -72,3 +96,11 @@ docker build -t code-seek .
 ```bash
 docker run -it --rm code-seek "Summarise what my web application does in 3 sentences."
 ```
+
+# Privacy
+
+Be aware of data usage policies when using this tool. Use for fun/hobby projects only. See
+
+[OpenAI API data usage policies](https://openai.com/policies/api-data-usage-policies)
+
+> ... OpenAI will not use data submitted by customers via our API to train or improve our models, unless you explicitly decide to share your data with us for this purpose...
