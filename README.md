@@ -1,6 +1,6 @@
 # code-seek
 
-> Give GPT knowledge about your project and add any info from the web.
+> give GPT access to project files, docs and websites
 
 It is acomplished with the [retrieval plugin](https://github.com/openai/chatgpt-retrieval-plugin), which allows models to perform semantic searches against a vector database ([chroma](https://github.com/chroma-core/chroma)).
 
